@@ -1,0 +1,70 @@
+<!--dome css selectors test-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	/*universal selector*/
+	*
+	{
+		font-size: 50px;
+	}
+	p.title
+	{
+		color: rgb(255,0,0);
+		font-style: italic;
+	}
+	/*group selector*/
+	h1,p
+	{
+		color: rgb(0,255,0);
+	
+	}
+	p span
+	{
+		color: rgb(0,0,255);
+	}
+	.color
+	{
+		background: rgb(100%,0%,0%);
+	}
+	.color1
+	{
+		text-decoration: underline;
+	}
+	/*multiple Classes*/
+	.color2
+	{
+		background: rgb(0%,100%,0%);
+	}
+	.color3
+	{
+		text-decoration: overline;
+	}
+	/*attribute selector*/
+	h2[class]
+	{
+		color: silver;
+	}
+	a[href][title]
+	{
+		border: dashed;
+		text-decoration: none;
+		background: #000;
+	}
+</style>
+</head>
+<body>
+<p class="title">天天向上</p>
+<h1>github</h1>
+<p>github</p>
+<p><span>github</span></p>
+<div class="title">github</div>
+<div class="color color1">github</div>
+<div class="color2 color3">github</div>
+<h2 class="github">github</h2>
+<h2 class="github1">github</h2>
+<a href="www.github.com" title="github">github</a>
+<a href="www.github.com">github</a>
+</body>
+</html>
