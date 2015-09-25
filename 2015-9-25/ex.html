@@ -52,6 +52,65 @@
 		text-decoration: none;
 		background: #000;
 	}
+	div[class="hehe haha"]
+	{
+		background: #ccc;
+	}
+	/*selection based on partial attribute values*/
+	span[class~="warning"]
+	{
+		color:red;
+	}
+	/*begin with warning*/
+	span[class^="warning"]
+	{
+		background: blue;
+	}
+	/*end with warning*/
+	span[class$="warning"]
+	{
+		background: green;
+	}
+	/*contain the warning*/
+	span[class*="warning"]
+	{
+		border: dashed;
+	}
+	a[href*="github.com"]
+	{
+		text-decoration: none;
+	}
+	img[src|="figure"]
+	{
+		width: 100px;
+		height: 100px;
+		background: blue;
+	}
+	div + h2
+	{
+		border: dotted;
+	}
+	h3>strong
+	{
+		border: double;
+	}
+	a:link
+	{
+		color: #666;
+		text-decoration: none;
+	}
+	a:visited
+	{
+		color:#000;
+	}
+	a:hover
+	{
+		color:red;
+	}
+	input:focus
+	{
+		background: red;
+	}
 </style>
 </head>
 <body>
@@ -63,8 +122,18 @@
 <div class="color color1">github</div>
 <div class="color2 color3">github</div>
 <h2 class="github">github</h2>
-<h2 class="github1">github</h2>
+<h2 class="github1">github11</h2>
 <a href="www.github.com" title="github">github</a>
 <a href="www.github.com">github</a>
+<div class="hehe haha">github</div>
+<span class="hehe warning">github</span>
+<span class="warning hehe">github</span>
+<a href="github.com">github</a>
+<a href="github.com/ruansongsong">github/ruansongsong</a>
+<img src="figure1.jpg" />
+<img src="figure2.jpg" />
+<h3><strong>github</strong><strong>github</strong></h3>
+<a href="hehe">hehe</a>
+<input />
 </body>
 </html>
