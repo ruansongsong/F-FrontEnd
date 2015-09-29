@@ -7,10 +7,7 @@
 <link rel="stylesheet" href="css/css.css">
 
 </head>
-<body class="bodybox">
-<script>
-    window.debug = true;
-</script>
+<body>
 <div class="wrap" id="wrap">
 
     <div class="item item-1">
@@ -24,7 +21,10 @@
     </div>
 
     <div class="item item-2">
-      
+      <div class="intro intro1"></div>
+      <div class="intro intro2"></div>
+      <div class="intro intro3"></div>
+      <div class="intro intro4"></div>
     </div>
 
     <div class="item item-3">
@@ -51,15 +51,10 @@
 var myslider=new iSlider({
     wrap:'#wrap',
     item:'.item',
-    onslide:function (index) {
-        if (index == 7) {
-            document.getElementById('J_joinNum').innerHTML=parseInt(Math.random()*10000);
-        }
-    }
+    speed:500,
+    isVertical:true,
+    index:0,
 });
-console.info(myslider)
-
-
 </script>
 </body>
 </html>
