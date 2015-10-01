@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>some test</title>
+	<script type="text/javascript">
+		/*document.write("<h1>github</h1>");
+		document.write("<h2>github</h2>");
+		function MyFunction()
+		{
+			x=document.getElementById("title");
+			x.innerHTML="github";
+			x.style.color = 'green';
+		}*/
+		var a=10;
+		document.write(a);
+		var cars = new Array();
+		cars[0]="audi";
+		cars[1]="bmw";
+		for(i=0;i<cars.length;i++)
+		{
+			document.write(cars[i]+"<br />");
+		}
+		var person=
+		{
+			FirstName:"hehe",
+			LastName:"haha"
+		}
+		document.write(person.FirstName);
+	</script>
+</head>
+<body>
+	<button onclick="MyFunction()"></button>
+	<h3 id="title"></h3>
+	<p>hehe</p>
+	<button onclick="MyFunction1()">github</button> 
+
+<script type="text/javascript">
+function MyFunction1()
+{
+	document.write("<p>覆盖文档了</p>");
+}
+</script>
+</body>
+</html>
