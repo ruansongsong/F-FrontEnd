@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>js操作HTML DOM</title>
+	</head>
+	<body>
+		<p id="title">old title</p>
+		<div id="div1">
+			<p id="p1">heheeh</p>
+			<p id="p2">hahaha</p>
+		</div>
+		<script type="text/javascript">
+			document.write(Date());
+			x=document.getElementById("title");
+			x.innerHTML="new title";
+			x.style.color = 'green';
+			var para=document.createElement("p");
+			var node=document.createTextNode("new para");
+			para.appendChild(node);
+			x.appendChild(para);
+			var child=document.getElementById("p1");
+			x=child.parentNode.removeChild(child);
+		</script>
+	</body>
+</html>
