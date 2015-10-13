@@ -5,9 +5,60 @@
 <title>demo</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
 <link rel="stylesheet" href="css/css.css">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/js.js"></script>
+<style>
 
+.mask
+{
+    position: absolute;
+    top: 0;
+    left:0;
+    background:#000;
+    opacity: 0.2;
+    z-index: 1;
+}
+.button
+{
+    margin:0 auto;
+    width:120px;
+    height:50px;
+    font-size:2em;
+    text-align: center;
+    line-height: 1.5em;
+    color:#fff;
+    background: #99cc32;
+    cursor:pointer;
+    z-index: 2;
+}
+.content
+{
+    position:absolute;
+    display: none;
+    width: 200px;
+    height: 200px;
+    background: #99cc32;
+    z-index: 2;
+}
+.close
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:50px;
+    height: 25px;
+    background: red;
+    color:#fff;
+    cursor:pointer;
+}
+</style>
 </head>
 <body>
+
+    <div class="mask"></div>
+        <div class="content">
+            <div class="close">关闭
+            </div>
+        </div>
 
 <div class="wrap" id="wrap">
 
@@ -16,32 +67,29 @@
         <div class="logo_png">
         </div>
         <div class="tech">
-        <span>百步梯技术部</span>
+        <span>爱上你主播</span>
        </div>
        </div>
 
     </div>
 
     <div class="item item-2">
-      <div class="we"><span>我们为</span></div>
-      <div class="intro intro1"><span>百步梯招新</span></div>
-      <div class="intro intro2"><span>雕刻时光</span></div>
-      <div class="intro intro3"><span>爱上女主播</span></div>
-      <div class="intro intro4"><span>毕业季</span></div>
-      <div class="intro intro5"><span>提供技术支持</span></div>
+    <div class="toupiao">
+      <div class="we"><span>主播们</span></div>
+      <div class="intro intro1" id="button1"><span>点我</span></div>
+      <div class="intro intro2"><span></span></div>
+      <div class="intro intro3"><span></span></div>
+      <div class="intro intro4"><span></span></div>
+      <div class="intro intro5"><span></span></div>
+      <div class="intro intro6"><span></span></div>
+      <div class="intro intro7"><span></span></div>
+      <div class="intro intro8"><span></span></div>
     </div>
-
+</div>
     <div class="item item-3">
        
     </div>
 
-    <div class="item item-4">
-       
-    </div>
-
-    <div class="item item-5">
-        
-    </div>
 
    
 
