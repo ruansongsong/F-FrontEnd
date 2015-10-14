@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>demo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+<link rel="stylesheet" href="css/css.css">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/js.js"></script>
+<style>
+
+.mask
+{
+    position: absolute;
+    top: 0;
+    left:0;
+    background:#000;
+    opacity: 0.2;
+    z-index: 1;
+}
+.button
+{
+    margin:0 auto;
+    width:120px;
+    height:50px;
+    font-size:2em;
+    text-align: center;
+    line-height: 1.5em;
+    color:#fff;
+    background: #99cc32;
+    cursor:pointer;
+    z-index: 2;
+}
+.content
+{
+    position:absolute;
+    display: none;
+    width: 200px;
+    height: 200px;
+    background: #99cc32;
+    z-index: 2;
+}
+.close
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:50px;
+    height: 25px;
+    background: red;
+    color:#fff;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+    <div class="mask"></div>
+        <div class="content">
+            <div class="close">关闭
+            </div>
+        </div>
+
+<div class="wrap" id="wrap">
+
+    <div class="item item-1">
+       <div class="logo">
+        <div class="logo_png">
+        </div>
+        <div class="tech">
+        <span>爱上你主播</span>
+       </div>
+       </div>
+
+    </div>
+
+    <div class="item item-2">
+    <div class="toupiao">
+      <div class="we"><span>主播们</span></div>
+      <div class="intro intro1" id="button1"><span>点我</span></div>
+      <div class="intro intro2"><span></span></div>
+      <div class="intro intro3"><span></span></div>
+      <div class="intro intro4"><span></span></div>
+      <div class="intro intro5"><span></span></div>
+      <div class="intro intro6"><span></span></div>
+      <div class="intro intro7"><span></span></div>
+      <div class="intro intro8"><span></span></div>
+    </div>
+</div>
+    <div class="item item-3">
+       
+    </div>
+
+
+   
+
+</div>
+<div class="icon_up">
+    <div class="icon_up_png"></div>
+</div>
+<div class="loading" id="loading">
+    <div class="content">
+        <div class="progress"><span id="progress_bg" style="width:0;"></span></div>
+        <p>Loading...</p>
+    </div>
+</div>
+<script type="text/javascript" src="js/iSlider.js"></script> 
+
+<script>
+var myslider=new iSlider({
+    wrap:'#wrap',
+    item:'.item',
+    speed:500,
+    isVertical:true,
+    index:0,
+    playClass:'play',
+    loadingImgs:[
+        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/open_content.png?d=20150203165217',
+        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/invite_bg.png?d=20150203165217',
+        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/open_bg_after.png?d=20150203165217',
+        'images/icon_up.png'
+    ],
+    onloading:function (complete,total) {
+        this.$('#progress_bg').style.width=complete/total*100+'%';
+        if (complete==total) {
+            this.$('#loading').style.display="none"
+        }
+    }
+});
+</script>
+</body>
+</html>
