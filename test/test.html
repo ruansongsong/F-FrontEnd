@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js</title>
+
+</head>
+<body>
+<button data-no="1">按钮1</button>
+<button data-no="2">按钮2</button>
+<button data-no="3">按钮3</button>
+<button data-no="4">按钮4</button>
+<button data-no="5">按钮5</button>
+<div id="test"></div>
+<script type="text/javascript">
+	var button = document.getElementsByTagName("button");
+	var test = document.getElementById("test");
+	button[2].innerHTML="jj";
+	var num = button[3].data-no;
+	// button[2].addEventListener("click",function(e){
+	// 		var num = this.data-no;
+	// 		alert(num);
+	// 	}
+
+	// 		)
+	
+	// alert(button.length);
+	// button[2].addEventListener("click", function(e){
+	// 	this.disabled = true;
+	// 	var num = this.data-no;
+	// 	alert(num);
+	// 	}
+
+	// )
+	// for (var i = 0; i < button.length; i++) {
+	// 	button[i].addEventListener("click",function(e)
+	// 	{
+	// 		this.disabled = true;
+	// 		alert(this.data-no);
+	// 	})
+	// };
+
+</script>
+</body>
+</html>
