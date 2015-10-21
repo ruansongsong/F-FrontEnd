@@ -14,12 +14,14 @@
 	  
 	   var data = {};   //创建接受数据的对象
 	   
-	   try{
-		   
-	      data = JSON.parse(request.responseText);   //返回数据赋值data
-		  
-	   } catch(e) {
-		  console.error(e);}
+	   try
+	   {  
+	      data = JSON.parse(request.responseText);   //返回数据赋值data		  
+	   } 
+	   catch(e) 
+	   {
+		  console.error(e);
+	   }
 	   
 			test.innerHTML=data[0];   //将对象取出放入页面
 			//tel.innerHTML=data[1];

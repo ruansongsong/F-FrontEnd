@@ -15,7 +15,7 @@
 <script type="text/javascript">
 	var button = document.getElementsByTagName("button");
 	var test = document.getElementById("test");
-	button[2].innerHTML="jj";
+	
 	// var num = button[3].getAttribute("data-no");
 	// alert(num);
 	// button[2].addEventListener("click",function(e){
@@ -36,6 +36,7 @@
 	function disabledButton()
 	{
 		for (var i = 0; i < button.length; i++) {
+			button[i].innerHTML="voted";
 			button[i].disabled = true;
 		};
 	}

@@ -1,5 +1,6 @@
    $(document).ready(function(){
-        $("#button1").click(function(){
+
+        $(".intro").click(function(){
             $(".mask").css({
                 "height":$(window).height(),
                 "width":$(window).width(),
@@ -15,6 +16,15 @@
                     "width":$(window).width()
                 })
             })
+            var num = this.getAttribute("player-no");
+            var vote_button = document.getElementById("vote");
+            //alert(num);
+            var set = document.getElementById("vote");
+            set.setAttribute("data-no", num);
+            var vote_button_no = vote_button.getAttribute("data-no");
+            alert(vote_button_no);
+
+
             //监听浏览器窗口大小变化,根据当前窗口居中弹出窗口
             $(window).resize(function(){
                 $(".vote_content").css({
