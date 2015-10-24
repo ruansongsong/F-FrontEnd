@@ -17,6 +17,9 @@
             set.setAttribute("data-no", num);
             var vote_button_no = vote_button.getAttribute("data-no");
             alert(vote_button_no);
+            var request = new XMLHttpRequest();
+            request.open("POST","action.php",true);
+            request.send('player='+vote_button_no);
             
             //监听浏览器窗口大小变化,根据当前窗口改变遮罩大小
             $(window).resize(function(){
