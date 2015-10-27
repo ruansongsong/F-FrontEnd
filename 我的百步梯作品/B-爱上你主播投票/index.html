@@ -12,13 +12,21 @@
 </style>
 </head>
 <body>
-
+<!-- 弹窗 start-->
 <div class="mask"></div>
 <div class="vote_content">
-    <div class="close">关闭
+    <div class="close">X
     </div>
-    <button class="vote" id="vote" data-no="1">投票</button>
+    <div class="player_image">
+      <img id="player_image" src="" alt="" />
+    </div>
+    <div class="player_intro">
+    <p id="player_intro"></p>
+    </div>
+
+    <div class="vote" id="vote" data-no="0">投票</div>
 </div>
+<!-- 弹窗 end-->
 
 <div class="wrap" id="wrap">
 
@@ -36,14 +44,14 @@
     <div class="item item-2">
     <div class="toupiao">
       <div class="we"><span>主播们</span></div>
-      <div class="intro intro1" player-no="1"><span>点我</span></div>
-      <div class="intro intro2" player-no="2"><span>点我</span></div>
-      <div class="intro intro3" player-no="3"><span>点我</span></div>
-      <div class="intro intro4" player-no="4"><span>点我</span></div>
-      <div class="intro intro5" player-no="5"><span>点我</span></div>
-      <div class="intro intro6" player-no="6"><span>点我</span></div>
-      <div class="intro intro7" player-no="7"><span>点我</span></div>
-      <div class="intro intro8" player-no="8"><span>点我</span></div>
+      <div class="intro intro1" player-no="0"><span class="name">点我</span></div>
+      <div class="intro intro2" player-no="1"><span class="name">点我</span></div>
+      <div class="intro intro3" player-no="2"><span class="name">点我</span></div>
+      <div class="intro intro4" player-no="3"><span class="name">点我</span></div>
+      <div class="intro intro5" player-no="4"><span class="name">点我</span></div>
+      <div class="intro intro6" player-no="5"><span class="name">点我</span></div>
+      <div class="intro intro7" player-no="6"><span class="name">点我</span></div>
+      <div class="intro intro8" player-no="7"><span class="name">点我</span></div>
     </div>
 </div>
     <div class="item item-3">
@@ -74,9 +82,8 @@ var myslider=new iSlider({
     index:0,
     playClass:'play',
     loadingImgs:[
-        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/open_content.png?d=20150203165217',
-        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/invite_bg.png?d=20150203165217',
-        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/open_bg_after.png?d=20150203165217',
+        'images/player_0.png',
+        'images/player_1.png',
         'images/icon_up.png'
     ],
     onloading:function (complete,total) {
