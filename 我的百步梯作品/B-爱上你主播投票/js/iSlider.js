@@ -438,13 +438,9 @@ iSlider.prototype={
             if (self.$('.'+self.opts.playClass,self.wrap)) {
                 self.removeClass(self.$('.'+self.opts.playClass,self.wrap),self.opts.playClass)
             }
-            self.addClass(self._current,self.opts.playClass)
-
-            try {
-                self.opts.onslide.call(self,self.index);
-            } catch (e) {
-                console.info(e)
-            }
+            $(".vote-wrap,.word1,.word2,.word3,.word4").css("opacity","1")
+            $("div[player-no]").css("opacity","1");
+            $(".players-loading").css("opacity","0");
 
             var prevIndex = self.index-1;
             if (prevIndex < 0) {
@@ -498,6 +494,9 @@ iSlider.prototype={
             if (self.$('.'+self.opts.playClass,self.wrap)) {
                 self.removeClass(self.$('.'+self.opts.playClass,self.wrap),self.opts.playClass)
             }
+            $(".vote-wrap,.word1,.word2,.word3,.word4").css("opacity","0")
+            $("div[player-no]").css("opacity","0");
+            $(".players-loading").css("opacity","1");
             self.addClass(self._current,self.opts.playClass)
 
             try {

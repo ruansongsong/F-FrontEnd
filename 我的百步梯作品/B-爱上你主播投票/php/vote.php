@@ -1,9 +1,9 @@
 <?php   
-$lifeTime = 8 * 3600;		//8小时的session
+$lifeTime = 8 * 3600;       //8小时的session
 session_set_cookie_params($lifeTime);
 session_start();
-$number = $_POST['person'];
-    $wrong;	//存储错误信息
+$number = $_POST['person'] ;
+    $wrong; //存储错误信息
     $link = new mysqli(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS,SAE_MYSQL_DB);
 
     //检测是否设置过SESSION
@@ -34,15 +34,12 @@ $number = $_POST['person'];
             $voteTime = time();                 
             $sql = "INSERT INTO `vote_ip` (`VOTE_IP`,`VOTE_TIME`) VALUES(INET_ATON('$IP'),$voteTime)";
                     //echo $sql                  
-            if($link->query($sql))
-                        ;//echo "新IP已添加"."<br>";    
-            else
-                        ;//echo "添加失败";
+            $link->query($sql);
+          
     
-                    //更新vote库 
+            //更新vote库 
 
-            
-
+            $number = mysqli_real_escape_string($link,$number);
             $sql1 = 'SELECT `poll` FROM `vote` WHERE `id` = ' . $number ;
             $data = $link->query($sql1);
             $poll = $data->fetch_row();
@@ -59,7 +56,7 @@ $number = $_POST['person'];
         }   
             
     } 
-	
+    
         //查询票数情况
         $sql3 = 'SELECT `poll` FROM `vote` ';
         $result = $link->query($sql3);
@@ -67,8 +64,8 @@ $number = $_POST['person'];
         $Poll;
         $i = 0;
         while($row = $result->fetch_row()){
-            $totalPoll += $row[0];
-            $Poll[$i++] = $row[0];
+            $totalPoll += htmlspecialchars($row[0]);
+            $Poll[$i++] = htmlspecialchars($row[0]);
         }   
         $data = array_merge( $Poll,array('totalPoll' => $totalPoll),$wrong);
         echo json_encode($data);

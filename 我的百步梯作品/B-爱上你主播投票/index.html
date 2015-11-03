@@ -1,191 +1,146 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-<meta charset="utf-8">
-<title>demo</title>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
-<link rel="stylesheet" href="css/css.css">
-<script src="js/jquery.min.js"></script>
-<script src="js/js.js"></script>
-<style>
-
-</style>
-</head>
-<body>
-<!-- 弹窗 start-->
-<div class="mask"></div>
-<div class="vote_content">
-    <div class="close">X
-    </div>
-    <div class="player_image">
-      <img id="player_image" src="" alt="" />
-    </div>
-    <div class="player_intro">
-    <p id="player_intro"></p>
-    </div>
-
-    <div class="vote" id="vote" data-no="0">投票</div>
-</div>
-<!-- 弹窗 end-->
-
-<div class="wrap" id="wrap">
-
-    <div class="item item-1">
-       <div class="logo">
-        <div class="logo_png">
+  <head>
+    <meta charset="utf-8">
+    <title>爱上你主播总决赛投票</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <link rel="stylesheet" href="css/css.css">
+  </head>
+  <body>
+    <!-- 弹窗 start-->
+    <div class="mask"></div>
+    <div class="vote-content">
+      <div class="close">
+      </div>
+             <img id="players-image" class="players-image" src="" alt="" />
+    
+      <div class="players-intro">
+        <div class="player-name">
+          <p id="player-name"></p>
         </div>
-        <div class="tech">
-        <span>爱上你主播</span>
-       </div>
-       </div>
-
+        <div class="player-detail">
+          <p id="player-detail"></p>
+        </div>
+      </div>
+      <div class="vote" id="vote" data-no="">投票</div>
     </div>
-
-    <div class="item item-2">
-    <div class="toupiao">
-      <div class="we"><span>主播们</span></div>
-      <div class="intro intro1" player-no="0"><span class="name">点我</span></div>
-      <div class="intro intro2" player-no="1"><span class="name">点我</span></div>
-      <div class="intro intro3" player-no="2"><span class="name">点我</span></div>
-      <div class="intro intro4" player-no="3"><span class="name">点我</span></div>
-      <div class="intro intro5" player-no="4"><span class="name">点我</span></div>
-      <div class="intro intro6" player-no="5"><span class="name">点我</span></div>
-      <div class="intro intro7" player-no="6"><span class="name">点我</span></div>
-      <div class="intro intro8" player-no="7"><span class="name">点我</span></div>
+    <!-- 弹窗 end-->
+    <div class="wrap" id="wrap">
+      <!-- 第一页 start-->
+      <div class="item item-1">
+        <div class="item-1-bg1"></div>  
+        <div class="item-1-bg2"></div>
+        <div class="item-1-content">
+          <div class="vote-wrap">
+            <div class="logo"></div>
+            <div class="vote-title">
+          </div>
+          </div>
+          <div class="slogan">
+          <div class="word1">决赛台上 谁将赢得最佳人气殊荣</div>
+          <div class="word2">第八届&nbsp;&nbsp;爱上你主播 </div>
+          <div class="word3">11月13日晚7点 学术大讲堂</div>
+          <div class="word4">一声所爱，只为你来！</div>
+          </div>
+        </div>
+      </div>
+      <!-- 第一页 end-->
+      <!-- 第二页 start -->
+      <div class="item item-2">
+        <div class="item-2-bg1"></div>
+        <div class="item-2-bg2"></div>
+        <div class="players-list">
+          <div class="players-loading"></div>
+          <div class="intro intro1" player-no="1"><img class="players-images" src="images/p1.png"></div>
+          <div class="intro intro2" player-no="2"><img class="players-images" src="images/p2.png"></div>
+          <div class="intro intro3" player-no="3"><img class="players-images" src="images/p3.png"></div>
+          <div class="intro intro4" player-no="4"><img class="players-images" src="images/p4.png"></div>
+          <div class="intro intro5" player-no="5"><img class="players-images" src="images/p5.png"></div>
+          <div class="intro intro6" player-no="6"><img class="players-images" src="images/p6.png"></div>
+          <div class="intro intro7" player-no="7"><img class="players-images" src="images/p7.png"></div>
+          <div class="intro intro8" player-no="8"><img class="players-images" src="images/p8.png"></div>
+        </div>
+      </div>
+      <!-- 第二页 end -->
+      <!-- 第三页 start -->
+      <div class="item item-3">
+        <div class="item-3-bg1"></div>
+        <div class="item-3-bg2"></div>
+        
+        <div class="rule">
+        <div class="award-loading"></div>
+          <div class="rule-title">抽奖规则</div>
+          <div class="rule-detail">
+            从11月12日晚24：00，至11月15日午
+            12：00，投票后转发此投票页面到朋友圈，并截 图回复“华工百步梯”主页君，即有机会领取 总量3份的“爱上”大礼包：决赛VIP门票4 张+价值456元的创尔美胶原水凝护肤礼包1 份！快快投票后转发此投票页面到朋友圈，并 截图回复“华工百步梯”主页君，即有机会领 取总量3份的“爱上”大礼包.快快投票后转 发此投票页面到朋友圈.
+          </div>
+        </div>
+      </div>
+      <!-- 第三页 end -->
+      
     </div>
-</div>
-    <div class="item item-3">
-       
+    <!-- 滑动按钮 start -->
+    <div class="icon_up">
+      <div class="icon_up_png"></div>
     </div>
-
-
-   
-
-</div>
-<div class="icon_up">
-    <div class="icon_up_png"></div>
-</div>
-<div class="loading" id="loading">
-    <div class="content">
+    <!-- 滑动按钮 end -->
+    <!-- 最开始的加载 loaing start -->
+    <div class="loading" id="loading">
+      <div class="content">
         <div class="progress"><span id="progress_bg" style="width:0;"></span></div>
         <p>Loading...</p>
+      </div>
     </div>
-</div>
-<script type="text/javascript" src="js/iSlider.js"></script> 
-
-<script>
-var myslider=new iSlider({
-    wrap:'#wrap',
-    item:'.item',
-    speed:500,
-    isVertical:true,
-    index:0,
-    playClass:'play',
-    loadingImgs:[
-        'images/player_0.png',
-        'images/player_1.png',
-        'images/icon_up.png'
-    ],
-    onloading:function (complete,total) {
+    <!-- 最开始的加载 loaing end -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/js.js"></script>
+    <script type="text/javascript" src="js/iSlider.js"></script>
+    <script>
+    var myslider=new iSlider({
+      wrap:'#wrap',
+      item:'.item',
+      speed:500,
+      isVertical:true,
+      index:0,
+      //playClass:'play',
+      loadingImgs:[
+      
+      'images/item-1-bg1.png',
+      'images/item-1-bg2.png',
+      'images/logo.png',
+      'images/vote.png',
+      'images/item-2-bg1.png',
+      'images/item-2-bg2.png',
+      'images/players-loading.png',
+      'images/close.png',
+      'images/p1.png',
+      'images/p2.png',
+      'images/p3.png',
+      'images/p4.png',
+      'images/p5.png',
+      'images/p6.png',
+      'images/p7.png',
+      'images/p8.png',
+      'images/player1.png',
+      'images/player2.png',
+      'images/player3.png',
+      'images/player4.png',
+      'images/player5.png',
+      'images/player6.png',
+      'images/player7.png',
+      'images/player8.png',
+      'images/item-3-bg1.png',
+      'images/item-3-bg2.png',
+      'images/award-loading.png',
+      'images/icon_up.png'
+      ],
+      onloading:function (complete,total) {
         this.$('#progress_bg').style.width=complete/total*100+'%';
         if (complete==total) {
-            this.$('#loading').style.display="none"
+        this.$('#loading').style.display="none"
         }
-    }
-});
-</script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-<meta charset="utf-8">
-<title>demo</title>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
-<link rel="stylesheet" href="css/css.css">
-<script src="js/jquery.min.js"></script>
-<script src="js/js.js"></script>
-<style>
-
-</style>
-</head>
-<body>
-
-<div class="mask"></div>
-<div class="vote_content">
-    <div class="close">关闭
-    </div>
-    <button class="vote" id="vote" data-no="1">投票</button>
-</div>
-
-<div class="wrap" id="wrap">
-
-    <div class="item item-1">
-       <div class="logo">
-        <div class="logo_png">
-        </div>
-        <div class="tech">
-        <span>爱上你主播</span>
-       </div>
-       </div>
-
-    </div>
-
-    <div class="item item-2">
-    <div class="toupiao">
-      <div class="we"><span>主播们</span></div>
-      <div class="intro intro1" player-no="1"><span>点我</span></div>
-      <div class="intro intro2" player-no="2"><span>点我</span></div>
-      <div class="intro intro3" player-no="3"><span>点我</span></div>
-      <div class="intro intro4" player-no="4"><span>点我</span></div>
-      <div class="intro intro5" player-no="5"><span>点我</span></div>
-      <div class="intro intro6" player-no="6"><span>点我</span></div>
-      <div class="intro intro7" player-no="7"><span>点我</span></div>
-      <div class="intro intro8" player-no="8"><span>点我</span></div>
-    </div>
-</div>
-    <div class="item item-3">
-       
-    </div>
-
-
-   
-
-</div>
-<div class="icon_up">
-    <div class="icon_up_png"></div>
-</div>
-<div class="loading" id="loading">
-    <div class="content">
-        <div class="progress"><span id="progress_bg" style="width:0;"></span></div>
-        <p>Loading...</p>
-    </div>
-</div>
-<script type="text/javascript" src="js/iSlider.js"></script> 
-
-<script>
-var myslider=new iSlider({
-    wrap:'#wrap',
-    item:'.item',
-    speed:500,
-    isVertical:true,
-    index:0,
-    playClass:'play',
-    loadingImgs:[
-        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/open_content.png?d=20150203165217',
-        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/invite_bg.png?d=20150203165217',
-        'http://imgcache.gtimg.cn/mediastyle/mobile/event/20150129_double_language_mv/img/open_bg_after.png?d=20150203165217',
-        'images/icon_up.png'
-    ],
-    onloading:function (complete,total) {
-        this.$('#progress_bg').style.width=complete/total*100+'%';
-        if (complete==total) {
-            this.$('#loading').style.display="none"
-        }
-    }
-});
-</script>
-</body>
->>>>>>> 87bd5cf0064529e8d7d3229d929955602be98ea4
+      }
+    });
+    </script>
+  </body>
 </html>
